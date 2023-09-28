@@ -1,6 +1,8 @@
 const Auth = require("./controllers/Auth");
+const Test = require("./controllers/Test");
 const _routes = [
     ['', Auth],
+    ['', Test],
 ];
 
 const routes = (app)=>{
