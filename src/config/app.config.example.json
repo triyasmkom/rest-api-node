@@ -1,0 +1,21 @@
+{
+  "debug": true,
+  "jwt": {
+    "expired":  18000000,
+    "secret":  "secret",
+    "secretRefresh": "secret"
+  },
+  "db": {
+    "host": "localhost",
+    "user": "root",
+    "password": "12345",
+    "database": "rest_api_si",
+    "charset": "utf8mb4",
+    "rejectEmpty": true,
+    "port": 3306,
+    "bigIntAsNumber": true,
+    "insertIdAsNumber": true,
+    "stripMeta": false,
+    "dateStrings": true
+  }
+}
