@@ -5,12 +5,12 @@ const m$auth = require('./../modules/auth.module.js')
 
 const Auth = express.Router();
 
-Auth.get('/register', async (req, res)=>{
+Auth.post('/register', async (req, res)=>{
     const register = m$auth.register(req.body);
     response.sendResponse(res, register)
 });
 
-Auth.get('/login', async (req, res)=>{
+Auth.post('/login', async (req, res)=>{
     const login = m$auth.login(req.body);
     response.sendResponse(res, login)
 });

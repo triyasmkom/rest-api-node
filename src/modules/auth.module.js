@@ -33,12 +33,22 @@ class _auth{
             const add = await mysql.query(
                 'INSERT INTO auth_user ( name, email, password) VALUES (?, ?, ?)',
                 [body.name, body.email, body.password]
-            )
+            ).then(data=>{
+                return {
+                    status: true,
+                    data
+                }
+            }).catch(error=>{
+                return{
+                    status: false,
+                    error
+                }
+            })
 
             return {
                 status: true,
                 code: 201,
-                data: add
+                data: add.data
             }
 
         } catch(error){
